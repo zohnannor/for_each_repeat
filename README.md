@@ -42,5 +42,5 @@ fn foo(mut iter: impl Iterator<Item=i32>) {
 
 This crate can be used in `no_std` environment.
 
-[`for_each_repeat::foreachrepeat`]: http://docs.rs/for_each_repeat/trait.ForEachRepeat.html
-[`loopcontrol`]: http://docs.rs/for_each_repeat/enum.LoopControl.html
+[`for_each_repeat::foreachrepeat`]: https://docs.rs/for_each_repeat/*/for_each_repeat/trait.ForEachRepeat.html
+[`loopcontrol`]: https://docs.rs/for_each_repeat/*/for_each_repeat/enum.LoopControl.html
