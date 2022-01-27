@@ -106,7 +106,7 @@
     unused_qualifications,
     unused_results
 )]
-// #![no_std]
+#![no_std]
 #![doc = include_str!("../README.md")]
 
 /// Used to emulate the keywords' behavior inside the closure passed to [`ForEachRepeat::for_each_repeat`].
