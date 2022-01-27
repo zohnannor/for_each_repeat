@@ -178,17 +178,19 @@ where
 /// ```
 /// use for_each_repeat::{LoopControl, ForEachRepeat};
 ///
-/// //let res = iter.for_each_repeat(|v| {
-///  //   v.
-/// //});
+/// let r = (2..100).for_each_repeat(|x| {
+///     if 403 % x == 0 {
+///         return LoopControl::Break(x);
+///     }
 ///
-/// //assert_eq!(res, Some());
+///     LoopControl::CONTINUE
+/// });
+/// assert_eq!(r, Some(13));
 /// ```
 ///
 /// # [`Repeat`][LoopControl::Repeat] variant:
 ///
 /// ```
-///
 /// use for_each_repeat::{LoopControl, ForEachRepeat};
 ///
 /// let mut xs = vec![1, 2, 3, 4, 5];
@@ -212,9 +214,25 @@ where
 /// use for_each_repeat::ForEachRepeat;
 /// ```
 pub trait ForEachRepeat {
-    /// Consumes
+    /// Consumes the iterator, calls closure for each element. Next iteration is controlled by [`LoopControl`] variant.
     ///
-    /// See also: [`Iterator::try_for_each`]
+    /// # Example
+    ///
+    /// ```
+    /// use for_each_repeat::{LoopControl, ForEachRepeat};
+    ///
+    /// let r = (2..100).for_each_repeat(|x| {
+    ///     if 403 % x == 0 {
+    ///         return LoopControl::Break(x);
+    ///     }
+    ///
+    ///     LoopControl::CONTINUE
+    /// });
+    /// assert_eq!(r, Some(13));
+    /// ```
+    ///
+    /// See [trait's][ForEachRepeat] documentation for more.
+    /// See also: [`Iterator::try_for_each`].
     #[inline]
     fn for_each_repeat<B, C>(
         &mut self,
