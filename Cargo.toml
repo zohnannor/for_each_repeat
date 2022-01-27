@@ -1,7 +1,7 @@
 [package]
 name = "for_each_repeat"
 description = "`Iterator::for_each` that can repeat current iteration"
-version = "0.1.0"
+version = "0.1.1"
 edition = "2021"
 authors = ["Zohnannor <zohnannor@gmail.com>"]
 license-file = "LICENSE"
