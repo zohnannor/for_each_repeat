@@ -125,7 +125,7 @@
 /// assert_eq!(r, Some(17));
 /// ```
 ///
-/// It is named `LoopControl` to avoid confusion with [`ControlFlow`][std::ops::ControlFlow] enum from `std`.
+/// It is named `LoopControl` to avoid confusion with [`ControlFlow`][core::ops::ControlFlow] enum from `std`.
 #[derive(Debug, PartialEq, Eq, Copy, Clone, Ord, PartialOrd, Hash)]
 pub enum LoopControl<B = (), C = (), S = ()> {
     /// Break out of the loop and optionally return a resulting value.
