@@ -7,5 +7,5 @@ authors = ["Zohnannor <zohnannor@gmail.com>"]
 license-file = "LICENSE"
 keywords = ["iterator", "trait"]
 categories = ["no-std", "rust-patterns"]
-repository = "http://github.com/zohnannor/for_each_repeat/"
+repository = "https://github.com/zohnannor/for_each_repeat/"
 readme = "README.md"
